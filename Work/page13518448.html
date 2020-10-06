@@ -6386,15 +6386,18 @@
                             data-field-widthunits-value="">
                             <div class='tn-atom tn-atom__html'>
                                 <div class="registration">
-                                    <form action="/signup" method="post">
-                                        <div class="nam"> <input type="" name="" value="Имя" onfocus="this.value=''"
-                                                required> </div>
-                                        <div class="mail"> <input type="" name="" value="Эл. адрес"
-                                                onfocus="this.value=''" required> </div>
-                                        <div class="comm"> <label>Комментарий</label><br> <textarea name="message"
-                                                value="Комментарий"></textarea></div><button class="call">Оставить
-                                            заявку</button>
-                                    </form>
+                                    <form action="https://www.best3ds.ru/form.php" method="post" >
+                                        <div class="nam">
+                                          <input type="text" id="name" name="name" value="Имя" onfocus="this.value=''" required> </div>
+                                        <div class="mail">
+                                          <input type="text" id="email" name="email" value="Эл. адрес" onfocus="this.value=''" required> </div>
+                                        <div class="comm">
+                                          <label>Комментарий</label>
+                                          <br>
+                                          <textarea name="message" id="comment" value="Комментарий"></textarea>
+                                        </div>
+                                        <button class="call" id="form-send">Оставить заявку</button>
+                                      </form>
                                 </div>
                                 <style>
                                     body {
@@ -6957,7 +6960,31 @@
             </div>
         </a></div><!-- Stat -->
     <script
-        type="text/javascript">if (!window.mainTracker) { window.mainTracker = 'tilda'; } (function (d, w, k, o, g) { var n = d.getElementsByTagName(o)[0], s = d.createElement(o), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.key = k; s.id = "tildastatscript"; s.src = g; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, 'edad470014b4a5a0ac2a121a914559c5', 'script', 'https://stat.tildacdn.com/js/tildastat-0.2.min.js');</script>
+        type="text/javascript">if (!window.mainTracker) { window.mainTracker = 'tilda'; } (function (d, w, k, o, g) { var n = d.getElementsByTagName(o)[0], s = d.createElement(o), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.key = k; s.id = "tildastatscript"; s.src = g; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, 'edad470014b4a5a0ac2a121a914559c5', 'script', 'https://stat.tildacdn.com/js/tildastat-0.2.min.js');
+    
+    $('#form-send').click(function(){
+		email = $('#email').val();
+		name = $('#name').val();
+		comment = $('#comment').val();
+		console.log(email)
+		$.ajax({
+    method: "POST",
+    url: "https://best3ds.ru/form.php",
+    data: { email: email, name: name, comment: comment}
+    })
+  .done(function( msg ) {
+    if (msg ==1 ){
+		alert("Письмо отпавлено")
+	}
+	
+  });
+    return false;
+});
+
+	
+    
+    
+    </script>
 </body>
 
 </html>
