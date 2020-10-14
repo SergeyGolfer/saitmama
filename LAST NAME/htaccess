@@ -1,0 +1,57 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex page13095233.html
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^decor$ page13532420.html [NC]
+RewriteRule ^decor/$ page13532420.html [NC]
+
+RewriteRule ^smolnpark$ page13220630.html [NC]
+RewriteRule ^smolnpark/$ page13220630.html [NC]
+
+RewriteRule ^first$ page13095233.html [NC]
+RewriteRule ^first/$ page13095233.html [NC]
+
+RewriteRule ^futer$ page13515276.html [NC]
+RewriteRule ^futer/$ page13515276.html [NC]
+
+RewriteRule ^englishmile$ page13518402.html [NC]
+RewriteRule ^englishmile/$ page13518402.html [NC]
+
+RewriteRule ^russianhouse$ page13518448.html [NC]
+RewriteRule ^russianhouse/$ page13518448.html [NC]
+
+RewriteRule ^space$ page13518473.html [NC]
+RewriteRule ^space/$ page13518473.html [NC]
+
+RewriteRule ^yourdentist$ page13518498.html [NC]
+RewriteRule ^yourdentist/$ page13518498.html [NC]
+
+RewriteRule ^dominata$ page13527809.html [NC]
+RewriteRule ^dominata/$ page13527809.html [NC]
+
+RewriteRule ^bighouse$ page13528286.html [NC]
+RewriteRule ^bighouse/$ page13528286.html [NC]
+
+RewriteRule ^gold$ page13528702.html [NC]
+RewriteRule ^gold/$ page13528702.html [NC]
+
+RewriteRule ^stalresurs$ page13532297.html [NC]
+RewriteRule ^stalresurs/$ page13532297.html [NC]
+
+RewriteRule ^cottegs$ page13537182.html [NC]
+RewriteRule ^cottegs/$ page13537182.html [NC]
+
+RewriteRule ^office$ page13539546.html [NC]
+RewriteRule ^office/$ page13539546.html [NC]
+
+RewriteRule ^house$ page13548596.html [NC]
+RewriteRule ^house/$ page13548596.html [NC]
+
+RewriteRule ^favicon.ico$ https://static.tildacdn.com/tild6461-3162-4035-a166-343764623466/Vector_2_.ico [R=302,L]
+
